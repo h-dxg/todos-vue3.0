@@ -1,10 +1,8 @@
 const vueConfig = {
 
-  lintOnSave: false,
+  lintOnSave: false
   // babel-loader no-ignore node_modules/*
 
 }
-
-
 
 module.exports = vueConfig

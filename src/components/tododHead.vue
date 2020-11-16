@@ -13,18 +13,17 @@
 
 <script>
 import {
-  ref,
-  reactive
+  ref
 } from 'vue'
 import store from '@/store'
 export default {
   setup (props, context) {
-    // // ref 监听简单类型 
+    // // ref 监听简单类型
     const input = ref('')
-    let addTodo = () => {
+    const addTodo = () => {
       const text = input.value && input.value.trim()
       if (text.length > 0) {
-        store.commit("SET_H", text);
+        store.commit('SET_H', text)
         input.value = ''
       }
     }

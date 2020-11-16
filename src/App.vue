@@ -11,6 +11,9 @@
 
       <!-- 底部 -->
       <todoFooter></todoFooter>
+
+      <child v-model:childTitle="parentTitle"> </child>
+      {{parentTitle}}
     </section>
 
   </div>
@@ -20,11 +23,15 @@
 import tododHead from './components/tododHead.vue'
 import todoList from './components/todoList.vue'
 import todoFooter from './components/todoFooter.vue'
-
-
+import child from './components/child.vue'
 
 export default {
-  components: { tododHead, todoList, todoFooter },
+  components: { tododHead, todoList, todoFooter, child },
+  data () {
+    return {
+      parentTitle: '我是父级title'
+    }
+  }
 
 }
 
